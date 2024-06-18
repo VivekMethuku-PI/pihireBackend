@@ -5,11 +5,11 @@
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
-    <ContainerUser>root</ContainerUser>
   </PropertyGroup>
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
+    <ContainerUser>root</ContainerUser>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
