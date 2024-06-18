@@ -1,0 +1,17 @@
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.BAL.deps.json
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.BAL.dll
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.BAL.pdb
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.DAL.dll
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.Utilities.dll
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.DAL.pdb
+D:\work\piHIRE\PiHire.o\PiHire.BAL\bin\Debug\netcoreapp6.0\PiHire.Utilities.pdb
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.csproj.AssemblyReference.cache
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.AssemblyInfoInputs.cache
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.AssemblyInfo.cs
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.csproj.CoreCompileInputs.cache
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.csproj.CopyComplete
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.dll
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\refint\PiHire.BAL.dll
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\PiHire.BAL.pdb
+D:\work\piHIRE\PiHire.o\PiHire.BAL\obj\Debug\netcoreapp6.0\ref\PiHire.BAL.dll

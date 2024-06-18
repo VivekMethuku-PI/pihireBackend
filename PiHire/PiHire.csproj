@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Karambolo.Extensions.Logging.File" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\view\job-openings\job-view\promote\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\view\job-openings\job-view\promote\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\view\job-openings\job-view\promote\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\view\job-openings\job-view\promote\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\core\models\user.ts" />
+    <None Remove="ClientApp\src\app\shared\directives\file.ts" />
+    <None Remove="ClientApp\src\app\shared\services\messages.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\dist\" />
+    <Folder Include="ClientApp\src\app\core\authentication\" />
+    <Folder Include="ClientApp\src\app\core\guards\" />
+    <Folder Include="ClientApp\src\app\core\http\" />
+    <Folder Include="ClientApp\src\app\core\mocks\" />
+    <Folder Include="ClientApp\src\app\core\services\" />
+    <Folder Include="ClientApp\src\app\core\strategies\" />
+    <Folder Include="ClientApp\src\app\outlook\models\" />
+    <Folder Include="ClientApp\src\app\shared\component\job\" />
+    <Folder Include="ClientApp\src\app\shared\models\" />
+    <Folder Include="ClientApp\src\app\view\job-openings\job-view\candidates\candidate-view\candidate-assessments\" />
+    <Folder Include="ClientApp\src\app\view\settings\customize\email-template\email-template-list\create-email-template-modal-popup\" />
+    <Folder Include="ClientApp\src\app\view\settings\customize\message-template\message-template-create\" />
+    <Folder Include="ClientApp\src\app\view\settings\customize\message-template\message-template-list\" />
+    <Folder Include="ClientApp\src\app\view\settings\general\user-profile\" />
+    <Folder Include="ClientApp\src\app\view\settings\general\work-hour-config\" />
+    <Folder Include="ClientApp\src\assets\icons\" />
+    <Folder Include="ClientApp\src\assets\img\client-view\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\core\models\user.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\directives\file.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\messages.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>
