@@ -8,7 +8,7 @@ ENV ASPNETCORE_URLS=http://+:80
 # For more info, please refer to https://aka.ms/vscode-docker-dotnet-configure-containers
 
 USER root
-RUN chown -R $APP_USER $HOME/src
+
 
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG configuration=Release
