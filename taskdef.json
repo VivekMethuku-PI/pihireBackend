@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-west-3:533267216139:task-definition/Pihiretaskdef:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-3:533267216139:task-definition/pihiretaskdef:2",
     "containerDefinitions": [
         {
             "name": "pihirecontainer",
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/Pihiretaskdef",
+                    "awslogs-group": "/ecs/pihiretaskdef",
                     "awslogs-create-group": "true",
                     "awslogs-region": "eu-west-3",
                     "awslogs-stream-prefix": "ecs"
@@ -33,10 +33,10 @@
             "systemControls": []
         }
     ],
-    "family": "Pihiretaskdef",
+    "family": "pihiretaskdef",
     "executionRoleArn": "arn:aws:iam::533267216139:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -73,13 +73,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "4096",
-    "memory": "12288",
+    "cpu": "1024",
+    "memory": "3072",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-06-19T05:17:20.412Z",
+    "registeredAt": "2024-06-19T06:37:29.367Z",
     "registeredBy": "arn:aws:iam::533267216139:root",
     "tags": []
 }
